@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ .Title }} — {{ .Site.Title }}</title>
+</head>
+<body>
+  <header>
+    <h1>{{ .Title }}</h1>
+    <p>
+      <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01-02" }}</time>
+      · {{ .Params.author }}
+    </p>
+    {{ if .Params.tags }}
+    <p>标签：
+      {{ range .Params.tags }}
+      <a href="{{ "/tags/" | relURL }}{{ . | urlize }}/">{{ . }}</a>
+      {{ end }}
+    </p>
+    {{ end }}
+  </header>
+  <article>
+    {{ .Content }}
+  </article>
+</body>
+</html>

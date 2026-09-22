@@ -1,0 +1,9 @@
+baseURL = 'https://alwayswannafly01.github.io/hermes_blog/'
+languageCode = 'zh-cn'
+title = 'Hermes Blog'
+
+[taxonomies]
+  tag = 'tags'
+
+[params]
+  author = 'AlwaysWannaFly01'

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ .Site.Title }}</title>
+</head>
+<body>
+  <header>
+    <h1>{{ .Site.Title }}</h1>
+  </header>
+  <main>
+    <ul>
+      {{ range .Site.RegularPages }}
+      <li>
+        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+        <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01-02" }}</time>
+      </li>
+      {{ end }}
+    </ul>
+  </main>
+</body>
+</html>
